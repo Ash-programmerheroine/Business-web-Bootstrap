@@ -70,7 +70,7 @@ Top Header CSS
 .header-top{
     background: url(../images/Header-bg.gif) no-repeat center center;
     background-size: cover;
-    height: auto;
+    height: 850px;
 }
 .slider-top-arrow{
     background: url(../images/Top-slider-arrow.gif) no-repeat top center;
@@ -132,6 +132,7 @@ Top Header CSS
 }
 .fa-paper-plane-o{  padding: 0 6px;}
 
+.carousel-indicators { bottom: -72px;}
 /* =============
 WHAT WE DO section CSS
 =============== */
