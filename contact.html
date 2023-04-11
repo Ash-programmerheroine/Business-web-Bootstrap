@@ -84,27 +84,28 @@
                 <!-- half width content -->
                 <div class="col-lg-6 m-bottom-60">
                     <h1><span>CONTACT US</h1>
-                        <form>
-                            <div class="mb-3">
-                                <label for="Fullname" class="form-label d-none" required>Name</label>
-                                <input type="text" class="form-control" placeholder="Your Name"id="Fullname">
-                              </div>
-                            <div class="mb-3">
-                              <label for="exampleInputEmail1" class="form-label d-none" required>Email address</label>
-                              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your Email" aria-describedby="emailHelp">
-                              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    
+                    <form id="contact-form" action="" method="post">
+                        <div class="mb-3">
+                            <label for="name" class="form-label d-none" >Name</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
                             </div>
-                            
-                            <div class="mb-3">
-                                <label for="Fullname" class="form-label d-none">Phone Number</label>
-                                <input type="number" class="form-control" placeholder="Your Phone No."id="Fullname">
+                        <div class="mb-3">
+                            <label for="email" class="form-label d-none" >Email address</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" aria-describedby="emailHelp" required>
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="phone" class="form-label d-none">Phone Number</label>
+                            <input type="number" class="form-control" name="phone" placeholder="Your Phone No." id="Phone">
+                        </div>
+                        <div class="mb-3">
+                            <label for="Fullname" class="form-label d-none">Your Message</label>
+                            <textarea class="form-control" placeholder="Write Your Message" id="message" name="message" cols="20" rows="10" required></textarea>
                             </div>
-                            <div class="mb-3">
-                                <label for="Fullname" class="form-label d-none">Your Message</label>
-                                <textarea class="form-control" placeholder="Write Your Message" cols="20" rows="10"></textarea>
-                              </div>
-                            <button type="submit" class="btn btn-primary" >Submit</button>
-                          </form>
+                        <button type="submit" id="submit-btn" class="btn btn-primary" >Submit</button>
+                        </form>
                    
                 </div>
 

@@ -9,6 +9,7 @@ Website: ashrafikhanam.com
  gray color--#464646
  dark gray---#252525
  Ash--#a5a5a5
+ yellow-#FFC038
 =======*/
 
 /* =================================================
@@ -26,8 +27,11 @@ body{
 }
 h1, h2{font-family: 'Source Sans Pro', sans-serif;}
 h3, h4, h5, h6{font-family: 'Open Sans', sans-serif;}
-
+h6{
+    padding: 20px 0;
+}
 a{
+    color: #FFC038;
     text-decoration: none;
 }
 .m-top-90{margin-top: 90px;}
@@ -63,6 +67,37 @@ img{
     display:block;
     margin:0 auto;
 }
+.btn-primary {
+    background-color: #FFC038;
+    border-color: #FFC038;
+    padding: 1% 5%;
+    line-height: 43px;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #464646;
+    border-color: #464646;
+}
+.page-item.active .page-link {
+    background-color: #FFC038;
+    border-color: #FFC038;
+}
+.page-link {
+    color: #000;}
+.features-hover .fa, .bx {
+        font-size: 22px!important;
+}
+#comment-para{
+    margin: 0;
+}
+.btn-outline-success {
+    color: #464646;
+    background-color: #FFC038;
+    border-color: #FFC038;
+}
+.bg-primary {
+    background-color: #FFC038 !important;
+}
 
 /* =============
 Top Header CSS
@@ -70,7 +105,7 @@ Top Header CSS
 .header-top{
     background: url(../images/Header-bg.gif) no-repeat center center;
     background-size: cover;
-    height: 850px;
+    height: 750px;
 }
 .slider-top-arrow{
     background: url(../images/Top-slider-arrow.gif) no-repeat top center;
@@ -590,6 +625,120 @@ HIRE US section CSS
     padding: 6px 46px;
     margin-right: 40px;
 }
+/* ===============
+Latest updates css
+=========== */
+.latest-updates{
+    background:#fff;
+    padding: 100px 0;
+}
+
+.latest-updates h2{
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 50px;
+    font-style: italic;
+    text-align: center;
+}
+.latest-updates .title-border{
+    margin: 30px auto;
+}
+.latest-updates p{
+    font-size: 16px;
+    margin: 39px 244px 100px;
+    text-align: center;
+    line-height: 35px;
+}
+/* picture hover */
+
+.latest-updates .update-item-head{
+	height: 250px;
+    width: 360px;
+    position: relative;
+	transition: 00.3s ease-in-out;
+	overflow: hidden;
+    
+}
+.update-item-head {
+    display: block;
+    margin: 0 auto;
+}
+
+.item-hover{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background:rgba(237, 20, 91, 1) ;
+	top:0;
+	left:-100%;
+	text-align: center;
+	transition: 00.3s ease-in-out;	
+}
+.update-item-head:hover .item-hover{
+	background: rgba(237, 20, 91, .8) ;
+	left:0%;
+}
+.item-hover ul{
+	padding-inline-start: 0;
+	display: block;
+	margin-top: 30%;
+	
+}
+.item-hover ul li{
+	list-style-type: none;
+    display: inline;
+    font-size: 34px;
+    margin: 0 5px;
+    border-radius: 3px;
+}
+.item-hover ul li .fa{
+	color: #fff;
+	
+} 
+.item-box-body{
+    background:#f4f4f4;
+    padding: 15px;
+    height: 150px;
+    width: 360px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+}
+.item-box-body h4{
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.item-box-body p{
+    margin: 0;
+    font-size: 14px;
+    line-height: 27px;
+    color: #5a5a5a;
+    text-align: left;
+}
+ .show-more{
+    padding: 100px 0 0px;
+ }
+ .show-more .text-show-more-center{
+      display: block;                   
+      text-align: center;
+    }
+.show-more a{
+    color: #ed145b;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+}
+.show-more  .text-show-more-center .fa
+    {
+	display: block;
+	color:#ed145b;
+	font-size:30px;
+	margin:3px 0 0;
+	text-align:center;
+}
+
 
 /* =================
 FOOTER section CSS
@@ -623,7 +772,18 @@ footer .fa {
     border-radius: 2px;
     background: #ffc038;
     color: #fff;
-  }
+}
+article .fa {
+    padding: 16px;
+    font-size: 16px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 2px 2px;
+    border-radius: 2px;
+    background: #ffc038;
+    color: #fff;
+}
   
 .fa:hover {
     opacity: 0.7;
