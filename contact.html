@@ -107,9 +107,9 @@
                             <textarea class="form-control" placeholder="Write Your Message" rows="5" id="contact-message" onkeyup=validateMessage()></textarea>
                             <span id="message-error"></span>
                         </div>
-                        <button type="submit" id="submit-btn" class="btn btn-primary" onclick="return validateForm()" >Send Message</button>
+                        <button type="submit" id="submit-btn" class="btn btn-primary" onclick="validateForm(event)" >Send Message</button>
                         <span id="submit-error"></span>
-                        <div id ="success-message" class="alert alert-success d-none" role="alert"></div>
+                        <p id ="success-message" class="mt-20" ></p>
                     </form>
                    
                 </div>

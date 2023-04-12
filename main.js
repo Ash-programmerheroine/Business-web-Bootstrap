@@ -5,10 +5,14 @@
   const messageError = document.getElementById('message-error');
   const submitError = document.getElementById('submit-error');
   const successMessage = document.getElementById('success-message');
+  const nameInput = document.getElementById('contact-name');
+  const emailInput = document.getElementById('contact-email');
+  const phoneInput = document.getElementById('contact-phone');
+  const messageInput = document.getElementById('contact-message');
  
 
 function validateName(){
-    const name = document.getElementById('contact-name').value;
+    const name = nameInput.value;
     if (name.length == 0) {
         nameError.innerHTML = 'Name is required'; 
         return false;
@@ -23,7 +27,7 @@ function validateName(){
 
 
 function validatePhone(){
-    const phone = document.getElementById('contact-phone').value;
+    const phone = phoneInput.value;
     if(phone.length == 0){
     phoneError.innerHTML = 'Phone no. is required'; 
     return false;
@@ -43,7 +47,7 @@ function validatePhone(){
 
 
 function validateEmail(){
-    const email = document.getElementById('contact-email').value;
+    const email = emailInput.value;
     if(email.length == 0){
     emailError.innerHTML = 'Email is required'
     return false;
@@ -58,7 +62,7 @@ function validateEmail(){
 }
 
 function validateMessage(){
-    var message = document.getElementById('contact-message').value; 
+    var message = messageInput.value; 
     var required = 30;
     var left = required - message.length;
     if(left > 0) {
@@ -70,14 +74,28 @@ function validateMessage(){
     messageError.innerHTML = "<i class='bx bxs-check-circle'></i>"; 
     return true;
 }
-function validateForm(){
-    if(!validateName || !validateEmail || !validatePhone || !validateMessage){
+function validateForm(e){
+    e.preventDefault();
+    if(!validateName() || !validateEmail() || !validatePhone() || !validateMessage()){
+        successMessage.innerText=''
         submitError.innerHTML = 'Please Enter the Correct Information';
-        return false;
+        return ;
     }
- 
+    submitError.innerHTML = '';
+    nameInput.value='';
+    nameError.innerHTML = "";
+    emailInput.value='';
+    emailError.innerHTML = "";
+    phoneInput.value='';
+    phoneError.innerHTML = "";
+    messageInput.value='';
+    messageError.innerHTML = ""
     successMessage.style.display = 'block' ;
-    successMessage.innerHTML = 'Thank you For Your message';
-    return true;
+    successMessage.style.background = 'green' ;
+    successMessage.style.padding = '20px' ;
+    successMessage.style.borderRadius = '5px' ;
+    successMessage.style.marginTop = '20px' ;
+    successMessage.innerText = 'Thank you for Your message! Our representative will contact with you soon!';
+    // return true;
   
 }
