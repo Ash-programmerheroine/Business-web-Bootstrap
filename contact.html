@@ -82,31 +82,39 @@
             <div class="row slider-top-arrow">
 
                 <!-- half width content -->
-                <div class="col-lg-6 m-bottom-60">
+                <div class="col-lg-4 m-bottom-60">
                     <h1><span>CONTACT US</h1>
-                    
-                    <form id="contact-form" action="" method="post">
+                    <form id="contact-form" action="" method="">
                         <div class="mb-3">
                             <label for="name" class="form-label d-none" >Name</label>
-                            <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                            <input type="text"  class="form-control" placeholder="Write Your Name" id="contact-name" onkeyup=validateName()>
+                            <span id="name-error"></span>
                             </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label d-none" >Email address</label>
-                            <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" aria-describedby="emailHelp" required>
-                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                            <label for="email" class="form-label d-none" >Email</label>
+                            <input type="email" class="form-control" placeholder="Write Your Email" aria-describedby="emailHelp" id="contact-email" onkeyup=validateEmail()>
+                            <div  class="form-text">We'll never share your email with anyone else.</div>
+                            <span id="email-error"></span>
                         </div>
                         
                         <div class="mb-3">
-                            <label for="phone" class="form-label d-none">Phone Number</label>
-                            <input type="number" class="form-control" name="phone" placeholder="Your Phone No." id="Phone">
+                            <label for="phone" class="form-label d-none">Phone </label>
+                            <input type="tel" class="form-control" placeholder="171 1234 394" id="contact-phone" onkeyup=validatePhone()>
+                            <span id="phone-error"></span>
                         </div>
                         <div class="mb-3">
-                            <label for="Fullname" class="form-label d-none">Your Message</label>
-                            <textarea class="form-control" placeholder="Write Your Message" id="message" name="message" cols="20" rows="10" required></textarea>
-                            </div>
-                        <button type="submit" id="submit-btn" class="btn btn-primary" >Submit</button>
-                        </form>
+                            <label for="message" class="form-label d-none">Your Message</label>
+                            <textarea class="form-control" placeholder="Write Your Message" rows="5" id="contact-message" onkeyup=validateMessage()></textarea>
+                            <span id="message-error"></span>
+                        </div>
+                        <button type="submit" id="submit-btn" class="btn btn-primary" onclick="return validateForm()" >Send Message</button>
+                        <span id="submit-error"></span>
+                        <div id ="success-message" class="alert alert-success d-none" role="alert"></div>
+                    </form>
                    
+                </div>
+                <div class="col-lg-2">
+
                 </div>
 
                 <!-- half width slider -->
@@ -202,6 +210,7 @@
 
     <!-- Bootstrap js CDN link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
      
 </body>
 
